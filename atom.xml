@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Matthew Kanwisher's Blog]]></title>
+  <link href="http://www.kanwisher.com/atom.xml" rel="self"/>
+  <link href="http://www.kanwisher.com/"/>
+  <updated>2012-07-18T03:34:41-04:00</updated>
+  <id>http://www.kanwisher.com/</id>
+  <author>
+    <name><![CDATA[Matthew Kanwisher]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Roasting marshmallows in a volcano in Guatemala]]></title>
+    <link href="http://www.kanwisher.com/2010/04/02/volcano-marshmallow-roast/"/>
+    <updated>2010-04-02T09:13:00-04:00</updated>
+    <id>http://www.kanwisher.com/2010/04/02/volcano-marshmallow-roast</id>
+    <content type="html"><![CDATA[<p>
+    <object height="224" width="400">
+    <param name="allowfullscreen" value="true">
+    <param name="allowscriptaccess" value="always">
+    <param name="movie" value="http://www.facebook.com/v/696401384107"><embed src="http://www.facebook.com/v/696401384107" type="application/x-shockwave-flash" height="224" width="400">
+    </object>
+    </p>
+
+
+<pre><code>&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Lava flow&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style="font-family: lucida grande, tahoma, verdana, arial, sans-serif; font-size: 11px; color: #555555;"&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;object height="224" width="400"&gt;
+&lt;param name="allowfullscreen" value="true"&gt;
+&lt;param name="allowscriptaccess" value="always"&gt;
+&lt;param name="movie" value="http://www.facebook.com/v/696416603607"&gt;&lt;embed src="http://www.facebook.com/v/696416603607" type="application/x-shockwave-flash" height="224" width="400"&gt;
+&lt;/object&gt;
+</code></pre>
+
+<p></p></p>
+]]></content>
+  </entry>
+  
+</feed>

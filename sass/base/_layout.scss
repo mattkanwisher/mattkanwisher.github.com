@@ -14,10 +14,6 @@ $sidebar-width-wide: 300px !default;
 
 $indented-lists: false !default;
 
-$header-font-size: 1em !default;
-$header-padding-top: 1.5em !default;
-$header-padding-bottom: 1.5em !default;
-
 .group { @include pie-clearfix; }
 
 @mixin collapse-sidebar {
@@ -48,7 +44,7 @@ body {
   max-width: $max-width;
   position: relative;
   margin: 0 auto;
-  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section {
+  > header, > nav, > footer, #content > article, #content > div > article, #content > div > section, nav.pagination {
     @extend .group;
     padding-left: $pad-min;
     padding-right: $pad-min;
@@ -65,34 +61,14 @@ body {
       padding-right: $pad-wide;
     }
   }
-  div.pagination {
-    @extend .group;
-    margin-left: $pad-min;
-    margin-right: $pad-min;
-    @media only screen and (min-width: 480px) {
-      margin-left: $pad-narrow;
-      margin-right: $pad-narrow;
-    }
-    @media only screen and (min-width: 768px) {
-      margin-left: $pad-medium;
-      margin-right: $pad-medium;
-    }
-    @media only screen and (min-width: 992px) {
-      margin-left: $pad-wide;
-      margin-right: $pad-wide;
-    }
-  }
   > header {
-    font-size: $header-font-size;
-    padding-top: $header-padding-top;
-    padding-bottom: $header-padding-bottom;
+    font-size: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
 }
 
-#content {
-  overflow: hidden;
-  > div, > article { width: 100%; }
-}
+#content { > div, > article { width: 100%; }}
 
 aside.sidebar {
   float: none;
@@ -122,23 +98,21 @@ body.sidebar-footer {
 }
 
 @media only screen and (min-width: 550px) {
-  body > header { font-size: $header-font-size; }
+  body > header { font-size: 1em; }
 }
 @media only screen and (min-width: 750px) {
   aside.sidebar { @include collapse-sidebar; }
 }
-#main, #content, .sidebar {
-  @extend .group;
-}
 @media only screen and (min-width: 768px) {
   body { -webkit-text-size-adjust: auto; }
-  body > header { font-size: $header-font-size * 1.2; }
+  body > header { font-size: 1.2em; }
   #main {
+    @extend .group;
     padding: 0;
     margin: 0 auto;
   }
   #content {
-    overflow: visible;
+    @extend .group;
     margin-right: $sidebar-width-medium;
     position: relative;
     .no-sidebar & { margin-right: 0; border-right: 0; }
@@ -150,6 +124,7 @@ body.sidebar-footer {
     }
   }
   aside.sidebar {
+    @extend .group;
     width: $sidebar-width-medium - $sidebar-pad-medium*2;
     padding: 0 $sidebar-pad-medium $sidebar-pad-medium;
     background: none;
@@ -167,7 +142,7 @@ body.sidebar-footer {
 }
 
 @media only screen and (min-width: 992px) {
-  body > header { font-size: $header-font-size * 1.3; }
+  body > header { font-size: 1.3em; }
   #content { margin-right: $sidebar-width-wide; }
   #content {
     > div, > article {
@@ -180,6 +155,7 @@ body.sidebar-footer {
     padding: 1.2em $sidebar-pad-wide $sidebar-pad-wide;
     .collapse-sidebar & {
       padding: { left: $pad-wide; right: $pad-wide; }
+      @extend .group;
     }
   }
 }
@@ -189,4 +165,3 @@ body.sidebar-footer {
     ul, ol { margin-left: 0; }
   }
 }
-
