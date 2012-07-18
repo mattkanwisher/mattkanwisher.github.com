@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Matthew Kanwisher's Blog]]></title>
-  <link href="http://www.kanwisher.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Travel | Matthew Kanwisher's Blog]]></title>
+  <link href="http://www.kanwisher.com/category/travel/atom.xml" rel="self"/>
   <link href="http://www.kanwisher.com/"/>
   <updated>2012-07-18T03:53:06-04:00</updated>
   <id>http://www.kanwisher.com/</id>
