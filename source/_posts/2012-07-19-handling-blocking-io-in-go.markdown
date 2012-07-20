@@ -129,6 +129,7 @@ loop:
 
 So basically we kill the underlying process so the IO sends an EOF. This is a simplified example. In my server I do keep track of when I want processes to die and spawn and its not on a simple timer.
 
+Special thanks to mrlauer on the [Golang-nuts](https://groups.google.com/forum/?fromgroups#!forum/golang-nuts) message board.
 
 Shameless Plug:
 
