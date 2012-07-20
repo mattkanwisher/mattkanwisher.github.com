@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Handling blocking IO in GO"
+title: "Handling blocking IO in GO."
 date: 2012-07-19 20:17
 comments: true
 categories: 
 ---
 
 
-One of the most frustrating things when you start with go is that fact that IO is blocking. So for example today I needed to spawn a process and read the stdout, easy right?
+So I was trying to write a simple system monitoring server in (Go)[http://golang.org/] and one of the problems I ran into was blocking IO, so for example if you need to spawn a sub process and listen to it's output you need to spawn a seperate go routines to monitor it. Thats fine, however the problem is if you ever have a piece of blocking IO that never returns like say your spawning "tail -f" you will have no way of killing the goroutine. I love blocking IO, but not having a mechanism to timeout on blocking IO seems like a big deficiency. So lets start with a really simple example of how the blocking IO works and build up to solve my problem.
 
 
 ``` go
