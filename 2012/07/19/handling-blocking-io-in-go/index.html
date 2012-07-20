@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Matthew Kanwisher's Blog</title>
+  <title>Handling blocking IO in GO - Matthew Kanwisher's Blog</title>
   <meta name="author" content="Matthew Kanwisher">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.kanwisher.com/">
+  <link rel="canonical" href="http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -74,15 +74,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/2012/07/19/handling-blocking-io-in-go/">Handling blocking IO in GO</a></h1>
+      <h1 class="entry-title">Handling blocking IO in GO</h1>
     
     
       <p class="meta">
@@ -105,7 +102,7 @@
   </header>
 
 
-  <div class="entry-content"><p>One of the most frustrating things when you start with go is that fact that IO is blocking. So for example today I needed to spawn a process and read the stdout, easy right?</p>
+<div class="entry-content"><p>One of the most frustrating things when you start with go is that fact that IO is blocking. So for example today I needed to spawn a process and read the stdout, easy right?</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -323,22 +320,16 @@ So lets improve it a bit and make it a go routine so it doesn&#8217;t block at a
 
 <p>At <a href="http://errplane.com">Errplane</a> we use Go to build a service for rails exception tracking, log aggregation and alerting / monitoring.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/04/02/volcano-marshmallow-roast/">Roasting marshmallows in a volcano in Guatemala</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Matthew Kanwisher</span></span>
+
+      
 
 
 
@@ -350,48 +341,44 @@ So lets improve it a bit and make it a go routine so it doesn&#8217;t block at a
   
 
 
-<time datetime="2010-04-02T09:13:00-04:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2010</time>
-        
-      </p>
+<time datetime="2012-07-19T20:17:00-04:00" pubdate data-updated="true">Jul 19<span>th</span>, 2012</time>
+      
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2010/04/02/volcano-marshmallow-roast/" title="Previous Post: Roasting marshmallows in a volcano in Guatemala">&laquo; Roasting marshmallows in a volcano in Guatemala</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-  <div class="entry-content"><p>
-    <object height="224" width="400">
-    <param name="allowfullscreen" value="true">
-    <param name="allowscriptaccess" value="always">
-    <param name="movie" value="http://www.facebook.com/v/696401384107"><embed src="http://www.facebook.com/v/696401384107" type="application/x-shockwave-flash" height="224" width="400">
-    </object>
-</p>
-
-
-<p>
-    <object height="224" width="400">
-    <param name="allowfullscreen" value="true">
-    <param name="allowscriptaccess" value="always">
-    <param name="movie" value="http://www.facebook.com/v/696416603607"><embed src="http://www.facebook.com/v/696416603607" type="application/x-shockwave-flash" height="224" width="400">
-    </object>
-</p>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
-  
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     
   
 </aside>
+
 
     </div>
   </div>
@@ -407,7 +394,10 @@ So lets improve it a bit and make it a go routine so it doesn&#8217;t block at a
       var disqus_shortname = 'kanwisher';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go/';
+        var disqus_url = 'http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
