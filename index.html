@@ -9,7 +9,7 @@
   <meta name="author" content="Matthew Kanwisher">
 
   
-  <meta name="description" content="So I was trying to write a simple system monitorig server in go and one of the problems I ran into was blocking IO, so for example if you need to &hellip;">
+  <meta name="description" content="So I was trying to write a simple system monitoring server in Go and one of the problems I ran into was blocking IO, so for example if you need to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -87,7 +87,7 @@
   </header>
 
 
-  <div class="entry-content"><p>So I was trying to write a simple system monitorig server in go and one of the problems I ran into was blocking IO, so for example if you need to spawn sub processes and listen to their output you need to spawn seperate go routines to monitor them. Thats fine, however the problem is if you ever have a piece of blocking io that never returns like say your spawning &#8220;tail -f&#8221; you will have now way of killing the goroutine. I love blocking io, but not having a mechanism to timeout on blocking io seems like a big deficiency. So lets start with a really simple example of how the blocking IO works and build up to solve my problem.</p>
+  <div class="entry-content"><p>So I was trying to write a simple system monitoring server in <a href="http://golang.org/">Go</a> and one of the problems I ran into was blocking IO, so for example if you need to spawn a sub process and listen to it&#8217;s output you need to spawn a seperate go routines to monitor it. Thats fine, however the problem is if you ever have a piece of blocking IO that never returns like say your spawning &#8220;tail -f&#8221; you will have no way of killing the goroutine. I love blocking IO, but not having a mechanism to timeout on blocking IO seems like a big deficiency. So lets start with a really simple example of how the blocking IO works and build up to solve my problem.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
