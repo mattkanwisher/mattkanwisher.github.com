@@ -316,6 +316,8 @@ So lets improve it a bit and make it a go routine so it doesn&#8217;t block at a
 
 <p>So basically we kill the underlying process so the IO sends an EOF. This is a simplified example. In my server I do keep track of when I want processes to die and spawn and its not on a simple timer.</p>
 
+<p>Special thanks to mrlauer on the <a href="https://groups.google.com/forum/?fromgroups#!forum/golang-nuts">Golang-nuts</a> message board.</p>
+
 <p>Shameless Plug:</p>
 
 <p>At <a href="http://errplane.com">Errplane</a> we use Go to build a service for rails exception tracking, log aggregation and alerting / monitoring.</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Matthew Kanwisher's Blog]]></title>
   <link href="http://www.kanwisher.com/atom.xml" rel="self"/>
   <link href="http://www.kanwisher.com/"/>
-  <updated>2012-07-19T20:32:24-04:00</updated>
+  <updated>2012-07-19T20:35:18-04:00</updated>
   <id>http://www.kanwisher.com/</id>
   <author>
     <name><![CDATA[Matthew Kanwisher]]></name>
@@ -231,6 +231,8 @@ So lets improve it a bit and make it a go routine so it doesn&#8217;t block at a
 
 
 <p>So basically we kill the underlying process so the IO sends an EOF. This is a simplified example. In my server I do keep track of when I want processes to die and spawn and its not on a simple timer.</p>
+
+<p>Special thanks to mrlauer on the <a href="https://groups.google.com/forum/?fromgroups#!forum/golang-nuts">Golang-nuts</a> message board.</p>
 
 <p>Shameless Plug:</p>
 
