@@ -4,7 +4,7 @@
   <title><![CDATA[Matthew Kanwisher's Blog]]></title>
   <link href="http://www.kanwisher.com/atom.xml" rel="self"/>
   <link href="http://www.kanwisher.com/"/>
-  <updated>2012-07-20T14:33:19-04:00</updated>
+  <updated>2012-07-20T14:38:51-04:00</updated>
   <id>http://www.kanwisher.com/</id>
   <author>
     <name><![CDATA[Matthew Kanwisher]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Handling blocking IO in GO]]></title>
+    <title type="html"><![CDATA[Handling blocking IO in GO.]]></title>
     <link href="http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go/"/>
     <updated>2012-07-19T20:17:00-04:00</updated>
     <id>http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go</id>
-    <content type="html"><![CDATA[<p>One of the most frustrating things when you start with go is that fact that IO is blocking. So for example today I needed to spawn a process and read the stdout, easy right?</p>
+    <content type="html"><![CDATA[<p>So I was trying to write a simple system monitorig server in go and one of the problems I ran into was blocking IO, so for example if you need to spawn sub processes and listen to their output you need to spawn seperate go routines to monitor them. Thats fine, however the problem is if you ever have a piece of blocking io that never returns like say your spawning &#8220;tail -f&#8221; you will have now way of killing the goroutine. I love blocking io, but not having a mechanism to timeout on blocking io seems like a big deficiency. So lets start with a really simple example of how the blocking IO works and build up to solve my problem.</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
