@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Driftwood.js a simple javascript logging framework - Matthew Kanwisher's Blog</title>
+  <meta name="author" content="Matthew Kanwisher">
+
+  
+  <meta name="description" content="We were joking around the office the other day and were wondering why there weren&#8217;t any simple javascript logging libraries. The ones out there &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.kanwisher.com/2012/07/22/driftwood-dot-js-a-simple-javascript-logging-framework/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Matthew Kanwisher's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-336910-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Matthew Kanwisher's Blog</a></h1>
+  
+    <h2>Hacking code</h2>
+  
+</hgroup>
+
+</header>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Driftwood.js a simple javascript logging framework</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T19:14:00-04:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>We were joking around the <a href="http://errplane.com">office</a> the other day and were wondering why there weren&#8217;t any simple javascript logging libraries. The ones out there tried to completely copy log4j with abstract classes. We just wanted something that could have configurable log levels. Secondarily we needed to be able to post errors to the server.</p>
+
+<p>Here are a few examples from Driftwood, all you need to do is set your environment and then start logging!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Driftwood.env("development"); 
+</span><span class='line'>Driftwood.debug("test"); </span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want exceptions from users to be posted to your server just simply call the exception method. We automatically catch any window.onerrors and send them.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Driftwood.exception("exception text or object here")</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So we cleaned up the internal code and added a nice suite of jasmine unit test. Now you can fork it on gitubhub <a href="https://github.com/errplane/driftwood.js">Driftwood.js</a>.</p>
+
+<p>Also we have a slick looking documented source page <a href="http://errplane.github.com/driftwood.js/">Driftwood source annotated</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Matthew Kanwisher</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T19:14:00-04:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/category/error/'>error</a>, <a class='category' href='/category/exception/'>exception</a>, <a class='category' href='/category/javascript/'>javascript</a>, <a class='category' href='/category/logging/'>logging</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2012/07/19/handling-blocking-io-in-go/" title="Previous Post: Handling blocking IO in GO.">&laquo; Handling blocking IO in GO.</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Matthew Kanwisher -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'kanwisher';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.kanwisher.com/2012/07/22/driftwood-dot-js-a-simple-javascript-logging-framework/';
+        var disqus_url = 'http://www.kanwisher.com/2012/07/22/driftwood-dot-js-a-simple-javascript-logging-framework/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

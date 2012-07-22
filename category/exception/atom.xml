@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: exception | Matthew Kanwisher's Blog]]></title>
+  <link href="http://www.kanwisher.com/category/exception/atom.xml" rel="self"/>
+  <link href="http://www.kanwisher.com/"/>
+  <updated>2012-07-22T19:25:17-04:00</updated>
+  <id>http://www.kanwisher.com/</id>
+  <author>
+    <name><![CDATA[Matthew Kanwisher]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Driftwood.js a simple javascript logging framework]]></title>
+    <link href="http://www.kanwisher.com/2012/07/22/driftwood-dot-js-a-simple-javascript-logging-framework/"/>
+    <updated>2012-07-22T19:14:00-04:00</updated>
+    <id>http://www.kanwisher.com/2012/07/22/driftwood-dot-js-a-simple-javascript-logging-framework</id>
+    <content type="html"><![CDATA[<p>We were joking around the <a href="http://errplane.com">office</a> the other day and were wondering why there weren't any simple javascript logging libraries. The ones out there tried to completely copy log4j with abstract classes. We just wanted something that could have configurable log levels. Secondarily we needed to be able to post errors to the server.</p>
+
+<p>Here are a few examples from Driftwood, all you need to do is set your environment and then start logging!</p>
+
+<p><code>
+Driftwood.env("development");
+Driftwood.debug("test");
+</code></p>
+
+<p>If you want exceptions from users to be posted to your server just simply call the exception method. We automatically catch any window.onerrors and send them.</p>
+
+<p><code>
+Driftwood.exception("exception text or object here")
+</code></p>
+
+<p>So we cleaned up the internal code and added a nice suite of jasmine unit test. Now you can fork it on gitubhub <a href="https://github.com/errplane/driftwood.js">Driftwood.js</a>.</p>
+
+<p>Also we have a slick looking documented source page <a href="http://errplane.github.com/driftwood.js/">Driftwood source annotated</a></p>
+]]></content>
+  </entry>
+  
+</feed>

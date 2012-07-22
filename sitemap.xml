@@ -6,7 +6,13 @@
     </url>
     <url>
         <loc>http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go/</loc>
-        <lastmod>2012-07-20T14:44:15-04:00</lastmod>
+        <lastmod>2012-07-22T19:24:26-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.kanwisher.com/2012/07/22/driftwood-dot-js-a-simple-javascript-logging-framework/
+        </loc>
+        <lastmod>2012-07-22T19:23:42-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.kanwisher.com/about/</loc>
@@ -14,10 +20,10 @@
     </url>
     <url>
         <loc>http://www.kanwisher.com/blog/archives/</loc>
-        <lastmod>2012-07-20T14:44:15-04:00</lastmod>
+        <lastmod>2012-07-22T19:24:26-04:00</lastmod>
     </url>
     <url>
         <loc>http://www.kanwisher.com/</loc>
-        <lastmod>2012-07-20T14:44:15-04:00</lastmod>
+        <lastmod>2012-07-22T19:24:26-04:00</lastmod>
     </url>
 </urlset>

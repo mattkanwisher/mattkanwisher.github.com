@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: go | Matthew Kanwisher's Blog]]></title>
+  <link href="http://www.kanwisher.com/category/go/atom.xml" rel="self"/>
+  <link href="http://www.kanwisher.com/"/>
+  <updated>2012-07-22T19:25:17-04:00</updated>
+  <id>http://www.kanwisher.com/</id>
+  <author>
+    <name><![CDATA[Matthew Kanwisher]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Handling blocking IO in GO.]]></title>
+    <link href="http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go/"/>
+    <updated>2012-07-19T20:17:00-04:00</updated>
+    <id>http://www.kanwisher.com/2012/07/19/handling-blocking-io-in-go</id>
+    <content type="html"><![CDATA[<p>So I was trying to write a simple system monitoring server in <a href="http://golang.org/">Go</a> and one of the problems I ran into was blocking IO, so for example if you need to spawn a sub process and listen to it's output you need to spawn a seperate go routines to monitor it. Thats fine, however the problem is if you ever have a piece of blocking IO that never returns like say your spawning "tail -f" you will have no way of killing the goroutine. I love blocking IO, but not having a mechanism to timeout on blocking IO seems like a big deficiency. So lets start with a really simple example of how the blocking IO works and build up to solve my problem.</p>
+
+<p>``` go
+  cmd := exec.Command("tail", "-f", "/tmp/matt.txt")
+  stdout, err := cmd.StdoutPipe()
+  if err != nil {</p>
+
+<pre><code>  log.Fatal(err)
+</code></pre>
+
+<p>  }
+  if err := cmd.Start(); err != nil {</p>
+
+<pre><code>  log.Fatal(err)
+</code></pre>
+
+<p>  }</p>
+
+<p>  //Ok here is the read
+  reader := bufio.NewReader(stdout)
+  s,err := reader.ReadString('\n')</p>
+
+<p>```</p>
+
+<p>Ok thats great, but now the whole process waits while you read the io, which sucks if you have a server with lots of clients connecting.
+So lets improve it a bit and make it a go routine so it doesn't block at all.</p>
+
+<p>``` go</p>
+
+<p>func readLogData(filename string, log_id int, logOutputChan chan&lt;- <em>LogTuple, deathChan chan&lt;- </em>string) {</p>
+
+<pre><code>cmd := exec.Command("tail", "-f", filename)
+stdout, err := cmd.StdoutPipe()
+if err != nil {
+    log.Fatal(err)
+}
+if err := cmd.Start(); err != nil {
+    log.Fatal(err)
+}
+
+err  = nil
+reader := bufio.NewReader(stdout)
+sbuffer := ""
+lines := 0
+for ; err == nil;  {
+    s,err := reader.ReadString('\n')
+    sbuffer += s
+    lines += 1
+    if(lines &gt; 5 ) { //|| time &gt; 1 min) {
+        logOutputChan &lt;- &amp;LogTuple{ log_id, sbuffer}
+        sbuffer = ""
+        lines = 0
+    }
+    if err != nil {
+        deathChan &lt;- &amp;filename
+        return
+    }
+}
+
+//SetFinalizer
+</code></pre>
+
+<p>}</p>
+
+<p>go readLogData(alog.Log.Path, alog.Log.Id, logOutputChan, gorDeathChan)
+```</p>
+
+<p>A little bit more complicated, but lets explain it, so we broke this code into a seperate function that takes in 2 channels. Channels in go let you send data between go routines. We have one channel to get data from the go routine, and another that tells the goroutine to die. Why we need this? Cause there is no way to kill a goroutine safely.</p>
+
+<p>First problem you might notice is that if the underlying IO blocks forever and never returns we can never end this go routine. When would this happen? A good example is "tail -f " or a process that has gone haywire and is not responding. So how do we fix this ?</p>
+
+<p>``` go
+package main</p>
+
+<p>import (</p>
+
+<pre><code>"fmt"
+"log"
+"os/exec"
+"time"
+</code></pre>
+
+<p>)</p>
+
+<p>func main() {</p>
+
+<pre><code>cmd := exec.Command("tail", "-f", "/tmp/foo.txt")
+stdout, err := cmd.StdoutPipe()
+if err != nil {
+    log.Fatal(err)
+}
+if err := cmd.Start(); err != nil {
+    log.Fatal(err)
+}
+
+ch := make(chan string)
+quit := make(chan bool)
+go func() {
+    buf := make([]byte, 1024)
+    for {
+        n, err := stdout.Read(buf)
+        if n != 0 {
+            ch &lt;- string(buf[:n])
+        }
+        if err != nil {
+            break
+        }
+    }
+    fmt.Println("Goroutine finished")
+    close(ch)
+}()
+
+time.AfterFunc(time.Second, func() { quit &lt;- true })
+</code></pre>
+
+<p>loop:</p>
+
+<pre><code>for {
+    select {
+    case s, ok := &lt;-ch:
+        if !ok {
+            break loop
+        }
+        fmt.Print(s)
+    case &lt;-quit:
+        cmd.Process.Kill()
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>So basically we kill the underlying process so the IO sends an EOF. This is a simplified example. In my server I do keep track of when I want processes to die and spawn and its not on a simple timer.</p>
+
+<p>Special thanks to mrlauer on the <a href="https://groups.google.com/forum/?fromgroups#!forum/golang-nuts">Golang-nuts</a> message board.</p>
+
+<p>Shameless Plug:</p>
+
+<p>At <a href="http://errplane.com">Errplane</a> we use Go to build a service for rails exception tracking, log aggregation and alerting / monitoring.</p>
+]]></content>
+  </entry>
+  
+</feed>
