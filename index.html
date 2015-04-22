@@ -1,276 +1,476 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name=format-detection content="telephone=no">
-<title>kanwisher-blog1</title>
+  <meta charset="utf-8">
+  <title>Matthew Kanwisher's Blog</title>
+  <meta name="author" content="Matthew Kanwisher">
 
-<!-- SET: FAVICON -->
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-<!-- END: FAVICON -->
+  
+  <meta name="description" content="We were joking around the office the other day and were wondering why there weren&#8217;t any simple javascript logging libraries. The ones out there &hellip;">
+  
 
-<!-- SET: STYLESHEET -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
-<!-- END: STYLESHEET -->
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- SET: SCRIPTS -->
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-$(".prjt_lft_wod ul li.active .wodin").show();
-        $(".prjt_lft_wod ul li h2").click(function() {
-            $(this).parent().addClass('active');
-            $(this).parent().siblings().removeClass('active');
-            $(this).parent().find('.wodin').slideDown();
-            $(this).parent().siblings().find('.wodin').slideUp();
-        });
-        
-        $('.menu').click(function() {   
-     $('.header_in_rht').slideToggle();     
-     $(this).toggleClass("active"); 
- });
-});
-    </script>
-    
- <!--[if lt IE 9 ]>
-<style type="text/css">
-.header_in_rht  {width:474px;}
-</style>
-<![endif]-->
+  
+  <link rel="canonical" href="http://www.kanwisher.com/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Matthew Kanwisher's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-<!--[if IE]>
-<style type="text/css"> 
-.block2  {behavior:url(PIE.htc);}
-</style>
-<![endif]-->
-<!-- END: SCRIPTS -->
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-336910-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
 </head>
 
-<body>
+<body    class="collapse-sidebar sidebar-footer" >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Matthew Kanwisher's Blog</a></h1>
+  
+    <h2>Hacking code</h2>
+  
+</hgroup>
 
-<!-- wrapper starts -->
-<div class="wrapper">
+</header>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
     
-    <!-- container starts -->
-
-            
-            <!-- Header Starts -->
-            <div class="header">  
-                <div class="header_in">
-                    <a class="menu" target="menu"></a>
-                    <div class="header_in_rht">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a class="icon2" href="#">Speaking</a></li>
-                            <li><a class="icon3" href="#">Project</a></li>
-                            <li class="pad_last"><a class="icon4" href="#">Connect</a></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
-                </div>   
-                
-                     <div class="block1">
-                        <div class="block1_in">
-                            <h2>Matthew <em></em>Kanwisher</h2>
-                            <p>I am the creator of Ruby on Rails, a partner at 37signals, a NYT best-selling author, a public speaker, a hobbyist photographer, and a race car driver.</p>
-                        </div>
-                        <div class="clear"></div>
-                            <div class="block2">
-                                <img src="images/banimg.png" width="325" height="325" alt="img" class="img">
-                                <div class="block2_bag">
-                                    <a href="#" class="line"><img src="images/bagimg1.png" width="46" height="40" alt="bag"></a>
-                                    <img class="line1" src="images/banimg1.png" width="46" height="40" alt="banimg1">
-                                </div>
-                                
-                                 <div class="block2_cel">
-                                    <a href="#" class="crs"><img src="images/banimg2.png" width="34" height="58" alt="banimg2"></a>
-                                    <img class="crs1" src="images/banimg2a.png" width="108" height="59" alt="banimg1">
-                                </div>
-                                
-                                 <div class="block2_cel2">
-                                    <a href="#" class="dimnd"><img src="images/banicon1.png" width="42" height="33" alt="cion1"></a>
-                                    <img class="dimnd1" src="images/banicon1A.png" width="44" height="26" alt="banicon1">
-                                </div>
-                                
-                                <div class="block2_cel3">
-                                    <a href="#" class="lght"><img src="images/banlight3.png" width="32" height="45" alt="lght"></a>
-                                    <img class="lght1" src="images/banlight3a.png" width="118" height="31" alt="lght1">
-                                </div>
-                                
-                                 <div class="block2_cel4">
-                                    <a href="#" class="dol"><img src="images/banicon4.png" width="46" height="62" alt="banicon4"></a>
-                                    <img class="dol1" src="images/banicon4a.png" width="129" height="25" alt="iocn4">
-                                </div>
-
-
-                            </div>
-                            
-                            
-                        <div class="clear"></div>
-                        <div class="wrtng">
-                                <h3>Writting</h3>
-                               <p> <a href="http://microservicesingo.com/" target="blank" ><span class="subTitle">Microservices in go,</span></a>
-                               The course will help you to start building applications with Google Go right off the bat.</p>
-
-                            </div>
-                    </div>
-            
-            </div>  
-            <!-- Header ends -->
-            
-              
-            
-            <!-- maincontent Starts -->
-            <div class="container">
-                <div class="spekig">
-                    <div class="spekig_lft">
-                        <h4>My Speeking</h4>
-                        <div class="spekig_lft_sec">
-                          <iframe width="350" height="250" src="https://www.youtube.com/embed/mDTg1dLUqBE" frameborder="0" allowfullscreen></iframe>
-                              <h2> How to keep wall street chatting using Go </h2>
-                            <small>GopherConIndia 2015</small>
-                           
-                        </div>
-                    </div>
-                    
-                    <div class="spekig_rht">
-                        <div class="spekig_rht_in">
-                            <h4>Upcoming</h4>
-                            <p><span><b>Marketing Festival, Brno,</b></span> Czech Republic: Nov 01, '14 Conference Keynote: Digital Data Driven Revolutions</p>
-                            <p><span><b>Marketing Festival, Brno,</b></span> Czech Republic: Nov 01, '14 Conference Keynote: Digital Data Driven Revolutions</p>
-                        </div>
-                        
-                        <div class="spekig_rht_in_eng">
-                             <h4> Speaking Engagements</h4>
-                            <p><span>Marketing Festival, Brno,</span> Czech Republic: Nov 01, '14 Conference Keynote: Digital Data Driven Revolutions</p>
-                            <p><span>Marketing Festival, Brno,</span> Czech Republic: Nov 01, '14 Conference Keynote: Digital Data Driven Revolutions</p>
-                            <p><span>Marketing Festival, Brno,</span> Czech Republic: Nov 01, '14 Conference Keynote: Digital Data Driven Revolutions</p>
-                            <p><span>Marketing Festival, Brno,</span> Czech Republic: Nov 01, '14 Conference Keynote: Digital Data Driven Revolutions</p>
-
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            <div class="clear"></div>
-            </div>
-            
-            <!-- maincontent ends -->
-                <div class="container">
-                    <div class="prjt">
-                        <div class="prjt_lft">
-                            <h3>Github Projects</h3>
-                            <div class="prjt_lft_wod">
-                                <ul>
-                                    <li class="active">
-                                        <h2>Driftwood.js.</h2>
-                                        <div class="wodin">
-                                            <h5>Driftwood.js a simple javascript logging framework</h5>
-                                        
-                                        <div class="wodin_in">
-                                            
-                                            <p>We were joking around the office the other day and were wondering why there weren’t any simple javascript logging libraries. The ones out there tried to completely copy log4j with abstract classes. We just wanted something that could have configurable log levels. Secondarily we needed to be able to post errors to the server. Here are a few examples from Driftwood, all you need to do is set your environment and then start logging!</p>
-                                            <a href="https://github.com/errplane/driftwood.js">Download</a>
-                                        </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <h2>Handling blocking IO in GO.</h2>
-                                        <div class="wodin">
-                                            <h5>Handling blocking IO in GO.</h5>
-                                        
-                                        <div class="wodin_in">
-                                           
-                                            <p>So I was trying to write a simple system monitoring server in Go and one of the problems I ran into was blocking IO, so for example if you need to spawn a sub process and listen to it’s output you need to spawn a seperate go routines to monitor it. Thats fine, however the problem is if you ever have a piece of blocking IO that never returns like say your spawning “tail -f” you will have no way of killing the goroutine. I love blocking IO, but not having a mechanism to timeout on blocking IO seems like a big deficiency. So lets start with a really simple example of how the blocking IO works and build up to solve my problem.</p>
-                                            <a href="#">Download</a>
-                                        </div>
-                                        </div>
-                                    </li>
-                                   
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="prjt_rht">
-                            <h3>Latest Tweet</h3>
-                            <div class="prjt_rht_rect">
-                                <h4>Recent Tweets</h4>
-                                <a href="#">Follow me on twitter</a>
-                                <div class="clear"></div>
-                                    <ul>
-                                        <li>
-                                            <p>@<span>randomrab</span> At least you know they're flush. @<span>davemcclure</span> and friends gave them $1.2M, so they should be able
-                                            to pay for music rights.</p>
-                                            <h6>1022 days ago </h6>
-                                         </li>
-                                         <li>
-                                            <p>@<span>randomrab</span>Hey, if they pay you the price your want, I guess it's all good. But very sad that you had to catcch them first:(</p>
-                                            <h6>1022 days ago </h6>
-                                         </li>
-                                         <li>
-                                            <p>@<span>stopgooglfraud</span>SOPA has nothign to do with this. I haven;t asked their ISP to take anything offline. I asked Curebit to stop</p>
-                                            <h6>1022 days ago </h6>
-                                         </li>
-                                         <li>
-                                            <p>@<span>its_scutti</span> Would love to some time, but at Sebring I'll be driving for Ferrari. </p>
-                                            <h6>1022 days ago </h6>
-                                         </li>
-                                         <li>
-                                            <p>@<span>allangrant</span>Did you really turn off the comments on <span>http://t.co/OKWUaquU</span> because they were negative or is it a tech glitch?</p>
-                                            <h6>1022 days ago </h6>
-                                         </li>
-                                         <li>
-                                            <p>@<span>wirelessjoe</span> 12hours of Sebring. So excited for it!</p>
-                                            <h6>1022 days ago </h6>
-                                         </li>
-                                    </ul>
-                                
-                            </div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                
-            
-           <!--footer starts-->
-            
-            <div class="footer">
-                <div class="footer_in">
-                    <div class="footer_in_blck">
-                        <div class="footer_in_blck_img"><img src="images/ftrperson.png" width="215" height="214" alt="person"></div>
-                        <h2>Biography</h2>
-                         <h1>Matthew Campbell</h1>
-                         <p>Software developer for 15 years, Leader of remote teams</p>
-                           <p>Co-Founded InfluxDb (ErrPlane) , Gucci.com (NYC / Italy) Adidas.com (NYC/Germany), Bloomberg.com (NYC) Thomson Reuters (NYC/India/Thailand) (NYC), langfight.com</p>
-
-                           
-                         <h4>CONNECT</h4>
-                        <div class="footer_in_blck_icon">
-                             <ul>
-                                <li><a href="https://www.facebook.com/matthew.kanwisher"><img src="images/fbicon.png" width="29" height="29" alt="fb"></a></li>
-                                <li><a href="https://twitter.com/kanwisher"><img src="images/twticon.png" width="29" height="29" alt="twt"></a></li>
-                                <li><a href="https://plus.google.com/u/0/112301700011473146886/posts"><img src="images/gogleicon.png" width="29" height="29" alt="gogl"></a></li>
-                                <li><a href="matt@kanwisher.com"><img src="images/adricon.png" width="29" height="29" alt="adn"></a></li>
-                            </ul>
-                        <div class="clear"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="copy">
-                <div class="copy_in">
-                <p>&copy; 2014 <a href="https://www.Kanwisher.com">Kanwisher.com</a></p>
-                </div>
-            </div>
-            
-          <!--footer ends-->
-            
- 
-    <!--container ends-->
+      <h1 class="entry-title"><a href="/2012/07/22/driftwood-dot-js-a-simple-javascript-logging-framework/">Driftwood.js a simple javascript logging framework</a></h1>
     
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-22T19:14:00-04:00" pubdate data-updated="true">Jul 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We were joking around the <a href="http://errplane.com">office</a> the other day and were wondering why there weren&#8217;t any simple javascript logging libraries. The ones out there tried to completely copy log4j with abstract classes. We just wanted something that could have configurable log levels. Secondarily we needed to be able to post errors to the server.</p>
+
+<p>Here are a few examples from Driftwood, all you need to do is set your environment and then start logging!</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Driftwood.env("development"); 
+</span><span class='line'>Driftwood.debug("test"); </span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you want exceptions from users to be posted to your server just simply call the exception method. We automatically catch any window.onerrors and send them.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Driftwood.exception("exception text or object here")</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So we cleaned up the internal code and added a nice suite of jasmine unit test. Now you can fork it on gitubhub <a href="https://github.com/errplane/driftwood.js">Driftwood.js</a>.</p>
+
+<p>Also we have a slick looking documented source page <a href="http://errplane.github.com/driftwood.js/">Driftwood source annotated</a></p>
 </div>
-<!-- wrapper ends -->
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/07/19/handling-blocking-io-in-go/">Handling blocking IO in GO.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-19T20:17:00-04:00" pubdate data-updated="true">Jul 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>So I was trying to write a simple system monitoring server in <a href="http://golang.org/">Go</a> and one of the problems I ran into was blocking IO, so for example if you need to spawn a sub process and listen to it&#8217;s output you need to spawn a seperate go routines to monitor it. Thats fine, however the problem is if you ever have a piece of blocking IO that never returns like say your spawning &#8220;tail -f&#8221; you will have no way of killing the goroutine. I love blocking IO, but not having a mechanism to timeout on blocking IO seems like a big deficiency. So lets start with a really simple example of how the blocking IO works and build up to solve my problem.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='go'><span class='line'>  <span class="n">cmd</span> <span class="p">:=</span> <span class="n">exec</span><span class="p">.</span><span class="n">Command</span><span class="p">(</span><span class="s">&quot;tail&quot;</span><span class="p">,</span> <span class="s">&quot;-f&quot;</span><span class="p">,</span> <span class="s">&quot;/tmp/matt.txt&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">stdout</span><span class="p">,</span> <span class="n">err</span> <span class="p">:=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">StdoutPipe</span><span class="p">()</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">log</span><span class="p">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">err</span> <span class="p">:=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">log</span><span class="p">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">//Ok here is the read</span>
+</span><span class='line'>  <span class="n">reader</span> <span class="p">:=</span> <span class="n">bufio</span><span class="p">.</span><span class="n">NewReader</span><span class="p">(</span><span class="n">stdout</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">s</span><span class="p">,</span><span class="n">err</span> <span class="p">:=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadString</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ok thats great, but now the whole process waits while you read the io, which sucks if you have a server with lots of clients connecting.
+So lets improve it a bit and make it a go routine so it doesn&#8217;t block at all.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+</pre></td><td class='code'><pre><code class='go'><span class='line'><span class="k">func</span> <span class="n">readLogData</span><span class="p">(</span><span class="n">filename</span> <span class="nb">string</span><span class="p">,</span> <span class="n">log_id</span> <span class="nb">int</span><span class="p">,</span> <span class="n">logOutputChan</span> <span class="k">chan</span><span class="p">&lt;-</span> <span class="p">*</span><span class="n">LogTuple</span><span class="p">,</span> <span class="n">deathChan</span> <span class="k">chan</span><span class="p">&lt;-</span> <span class="p">*</span><span class="nb">string</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">cmd</span> <span class="p">:=</span> <span class="n">exec</span><span class="p">.</span><span class="n">Command</span><span class="p">(</span><span class="s">&quot;tail&quot;</span><span class="p">,</span> <span class="s">&quot;-f&quot;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">stdout</span><span class="p">,</span> <span class="n">err</span> <span class="p">:=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">StdoutPipe</span><span class="p">()</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">log</span><span class="p">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">if</span> <span class="n">err</span> <span class="p">:=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">log</span><span class="p">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">err</span>  <span class="p">=</span> <span class="n">nil</span>
+</span><span class='line'>    <span class="n">reader</span> <span class="p">:=</span> <span class="n">bufio</span><span class="p">.</span><span class="n">NewReader</span><span class="p">(</span><span class="n">stdout</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">sbuffer</span> <span class="p">:=</span> <span class="s">&quot;&quot;</span>
+</span><span class='line'>    <span class="n">lines</span> <span class="p">:=</span> <span class="mi">0</span>
+</span><span class='line'>    <span class="k">for</span> <span class="p">;</span> <span class="n">err</span> <span class="p">==</span> <span class="n">nil</span><span class="p">;</span>  <span class="p">{</span>
+</span><span class='line'>        <span class="n">s</span><span class="p">,</span><span class="n">err</span> <span class="p">:=</span> <span class="n">reader</span><span class="p">.</span><span class="n">ReadString</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span>
+</span><span class='line'>        <span class="n">sbuffer</span> <span class="p">+=</span> <span class="n">s</span>
+</span><span class='line'>        <span class="n">lines</span> <span class="p">+=</span> <span class="mi">1</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="n">lines</span> <span class="p">&gt;</span> <span class="mi">5</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">//|| time &gt; 1 min) {</span>
+</span><span class='line'>            <span class="n">logOutputChan</span> <span class="p">&lt;-</span> <span class="p">&amp;</span><span class="n">LogTuple</span><span class="p">{</span> <span class="n">log_id</span><span class="p">,</span> <span class="n">sbuffer</span><span class="p">}</span>
+</span><span class='line'>            <span class="n">sbuffer</span> <span class="p">=</span> <span class="s">&quot;&quot;</span>
+</span><span class='line'>            <span class="n">lines</span> <span class="p">=</span> <span class="mi">0</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>        <span class="k">if</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>            <span class="n">deathChan</span> <span class="p">&lt;-</span> <span class="p">&amp;</span><span class="n">filename</span>
+</span><span class='line'>            <span class="k">return</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c1">//SetFinalizer</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">go</span> <span class="n">readLogData</span><span class="p">(</span><span class="n">alog</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">Path</span><span class="p">,</span> <span class="n">alog</span><span class="p">.</span><span class="n">Log</span><span class="p">.</span><span class="n">Id</span><span class="p">,</span> <span class="n">logOutputChan</span><span class="p">,</span> <span class="n">gorDeathChan</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>A little bit more complicated, but lets explain it, so we broke this code into a seperate function that takes in 2 channels. Channels in go let you send data between go routines. We have one channel to get data from the go routine, and another that tells the goroutine to die. Why we need this? Cause there is no way to kill a goroutine safely.</p>
+
+<p>First problem you might notice is that if the underlying IO blocks forever and never returns we can never end this go routine. When would this happen? A good example is &#8220;tail -f &#8221; or a process that has gone haywire and is not responding. So how do we fix this ?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+</pre></td><td class='code'><pre><code class='go'><span class='line'><span class="k">package</span> <span class="n">main</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">import</span> <span class="p">(</span>
+</span><span class='line'>  <span class="s">&quot;fmt&quot;</span>
+</span><span class='line'>  <span class="s">&quot;log&quot;</span>
+</span><span class='line'>  <span class="s">&quot;os/exec&quot;</span>
+</span><span class='line'>  <span class="s">&quot;time&quot;</span>
+</span><span class='line'><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="n">cmd</span> <span class="p">:=</span> <span class="n">exec</span><span class="p">.</span><span class="n">Command</span><span class="p">(</span><span class="s">&quot;tail&quot;</span><span class="p">,</span> <span class="s">&quot;-f&quot;</span><span class="p">,</span> <span class="s">&quot;/tmp/foo.txt&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">stdout</span><span class="p">,</span> <span class="n">err</span> <span class="p">:=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">StdoutPipe</span><span class="p">()</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">log</span><span class="p">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">if</span> <span class="n">err</span> <span class="p">:=</span> <span class="n">cmd</span><span class="p">.</span><span class="n">Start</span><span class="p">();</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">log</span><span class="p">.</span><span class="n">Fatal</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">ch</span> <span class="p">:=</span> <span class="nb">make</span><span class="p">(</span><span class="k">chan</span> <span class="nb">string</span><span class="p">)</span>
+</span><span class='line'>  <span class="n">quit</span> <span class="p">:=</span> <span class="nb">make</span><span class="p">(</span><span class="k">chan</span> <span class="n">bool</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">go</span> <span class="k">func</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="n">buf</span> <span class="p">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="nb">byte</span><span class="p">,</span> <span class="mi">1024</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">for</span> <span class="p">{</span>
+</span><span class='line'>          <span class="n">n</span><span class="p">,</span> <span class="n">err</span> <span class="p">:=</span> <span class="n">stdout</span><span class="p">.</span><span class="n">Read</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+</span><span class='line'>          <span class="k">if</span> <span class="n">n</span> <span class="p">!=</span> <span class="mi">0</span> <span class="p">{</span>
+</span><span class='line'>              <span class="n">ch</span> <span class="p">&lt;-</span> <span class="nb">string</span><span class="p">(</span><span class="n">buf</span><span class="p">[:</span><span class="n">n</span><span class="p">])</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="k">if</span> <span class="n">err</span> <span class="p">!=</span> <span class="n">nil</span> <span class="p">{</span>
+</span><span class='line'>              <span class="k">break</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>      <span class="n">fmt</span><span class="p">.</span><span class="n">Println</span><span class="p">(</span><span class="s">&quot;Goroutine finished&quot;</span><span class="p">)</span>
+</span><span class='line'>      <span class="nb">close</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">}()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="n">time</span><span class="p">.</span><span class="n">AfterFunc</span><span class="p">(</span><span class="n">time</span><span class="p">.</span><span class="n">Second</span><span class="p">,</span> <span class="k">func</span><span class="p">()</span> <span class="p">{</span> <span class="n">quit</span> <span class="p">&lt;-</span> <span class="n">true</span> <span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">loop</span><span class="p">:</span>
+</span><span class='line'>  <span class="k">for</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">select</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">case</span> <span class="n">s</span><span class="p">,</span> <span class="n">ok</span> <span class="p">:=</span> <span class="p">&lt;-</span><span class="n">ch</span><span class="p">:</span>
+</span><span class='line'>          <span class="k">if</span> <span class="p">!</span><span class="n">ok</span> <span class="p">{</span>
+</span><span class='line'>              <span class="k">break</span> <span class="n">loop</span>
+</span><span class='line'>          <span class="p">}</span>
+</span><span class='line'>          <span class="n">fmt</span><span class="p">.</span><span class="n">Print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span><span class='line'>      <span class="k">case</span> <span class="p">&lt;-</span><span class="n">quit</span><span class="p">:</span>
+</span><span class='line'>          <span class="n">cmd</span><span class="p">.</span><span class="n">Process</span><span class="p">.</span><span class="n">Kill</span><span class="p">()</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So basically we kill the underlying process so the IO sends an EOF. This is a simplified example. In my server I do keep track of when I want processes to die and spawn and its not on a simple timer.</p>
+
+<p>Special thanks to mrlauer on the <a href="https://groups.google.com/forum/?fromgroups#!forum/golang-nuts">Golang-nuts</a> message board.</p>
+
+<p>Shameless Plug:</p>
+
+<p>At <a href="http://errplane.com">Errplane</a> we use Go to build a service for rails exception tracking, log aggregation and alerting / monitoring.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/04/02/volcano-marshmallow-roast/">Roasting marshmallows in a volcano in Guatemala</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-04-02T09:13:00-04:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+    <object height="224" width="400">
+    <param name="allowfullscreen" value="true">
+    <param name="allowscriptaccess" value="always">
+    <param name="movie" value="http://www.facebook.com/v/696401384107"><embed src="http://www.facebook.com/v/696401384107" type="application/x-shockwave-flash" height="224" width="400">
+    </object>
+</p>
+
+
+<p>
+    <object height="224" width="400">
+    <param name="allowfullscreen" value="true">
+    <param name="allowscriptaccess" value="always">
+    <param name="movie" value="http://www.facebook.com/v/696416603607"><embed src="http://www.facebook.com/v/696416603607" type="application/x-shockwave-flash" height="224" width="400">
+    </object>
+</p>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Matthew Kanwisher -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'kanwisher';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+
+
+
+
 </body>
 </html>
